@@ -75,6 +75,7 @@ public class GitLabIssueFetcher extends AbstractIssueFetcher {
 
     @NotNull
     public String getUrl(@NotNull String host, @NotNull String id) {
+	id = getIssueId(id);
         return host + "/issues/" + id;
     }
 
